@@ -14,7 +14,7 @@ const App = () => {
             How's the sky looking today?
           </h1>
           <Search />
-          <div className="w-full h-fit lg:h-149 grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-10 lg:gap-7 my-10">
+          <div className="w-full h-full lg:h-149 grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-10 lg:gap-7 my-10">
             <div className="w-full flex flex-col h-full md:gap-5 gap-7">
               <TodayForecast />
               <DailyForecast />

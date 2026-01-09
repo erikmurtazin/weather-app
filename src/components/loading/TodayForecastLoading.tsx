@@ -1,4 +1,4 @@
-const TodayForecast = () => {
+const TodayForecastLoading = () => {
   return (
     <div className="flex flex-col items-center w-full">
       <div className="lg:h-65 md:h-75 h-80 w-full flex flex-col justify-center items-center bg-item-bg rounded-xl">
@@ -45,4 +45,4 @@ const TodayForecast = () => {
   );
 };
 
-export default TodayForecast;
+export default TodayForecastLoading;

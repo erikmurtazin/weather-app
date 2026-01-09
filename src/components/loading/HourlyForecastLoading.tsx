@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import iconDropdown from '../assets/images/icon-dropdown.svg';
 
-const HourlyForecast = () => {
+const HourlyForecastLoading = () => {
   const weekdays = [
     'Monday',
     'Tuesday',
@@ -69,4 +69,4 @@ const HourlyForecast = () => {
     </div>
   );
 };
-export default HourlyForecast;
+export default HourlyForecastLoading;

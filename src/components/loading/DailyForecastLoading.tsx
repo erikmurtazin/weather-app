@@ -1,4 +1,4 @@
-const DailyForecast = () => {
+const DailyForecastLoading = () => {
   const renderDaysFields = () => {
     return Array.from({ length: 7 }).map((_, index) => (
       <div
@@ -20,4 +20,4 @@ const DailyForecast = () => {
   );
 };
 
-export default DailyForecast;
+export default DailyForecastLoading;

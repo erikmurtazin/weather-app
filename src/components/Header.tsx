@@ -21,7 +21,7 @@ const Header = () => {
           <img src={iconDropdown} className="h-4 w-4" />
         </button>
         {isDropdownOpen && (
-          <div className="absolute top-full z-3 w-55 bg-item-bg rounded-xl p-2 border border-border flex flex-col">
+          <div className="absolute top-full z-50 w-55 bg-item-bg rounded-xl p-2 border border-border flex flex-col">
             <div className="w-full flex flex-col items-start">
               <label className="text-sm text-label mx-2 my-1">
                 Temperature

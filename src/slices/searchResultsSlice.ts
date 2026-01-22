@@ -1,13 +1,14 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
-export interface SearchResultsInterface {
+export interface SearchResultsState {
   id: number;
   name: string;
   latitude: number;
   longitude: number;
+  country: string;
 }
 
-const initialState: SearchResultsInterface[] = [];
+const initialState: SearchResultsState[] = [];
 
 export const searchResultsSlice = createSlice({
   name: 'searchResults',
@@ -15,7 +16,7 @@ export const searchResultsSlice = createSlice({
   reducers: {
     setSearchResults(
       _,
-      action: PayloadAction<SearchResultsInterface[] | undefined>,
+      action: PayloadAction<SearchResultsState[] | undefined>,
     ) {
       return action.payload ?? [];
     },

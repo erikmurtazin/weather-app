@@ -1,15 +1,17 @@
-import { connect, useSelector } from 'react-redux';
-import type { SearchResultsInterface } from '../slices/searchResultsSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import type { SearchResultsState } from '../slices/searchResultsSlice';
+import type { RootState } from '../store';
+import { setSelectedCity } from '../slices/selectedCity';
+import { setSearch } from '../slices/searchSlice';
 
 const SearchSuggestions = () => {
-  interface SearchResultsState {
-    searchResults: SearchResultsInterface[];
-  }
-  const searchResults = useSelector(
-    (state: SearchResultsState) => state.searchResults,
-  );
-  const handleClick = (city: SearchResultsInterface) => {
-    console.log(city);
+  const dispatch = useDispatch();
+
+  const searchResults = useSelector((state: RootState) => state.searchResults);
+
+  const handleClick = (city: SearchResultsState) => {
+    dispatch(setSelectedCity(city));
+    dispatch(setSearch(''));
   };
 
   const renderSuggestions = () => {
@@ -17,7 +19,7 @@ const SearchSuggestions = () => {
       return searchResults.map((city) => (
         <button
           key={city.id}
-          className="lg:h-10 w-full hover:bg-btn-hover font-custom-regular text-text text-lg text-left px-3"
+          className="h-15 w-full hover:bg-btn-hover font-custom-regular text-text text-lg text-left px-3"
           onClick={() => handleClick(city)}
         >
           {city.name}
@@ -25,7 +27,7 @@ const SearchSuggestions = () => {
       ));
     }
     return (
-      <div className="lg:h-10 w-full flex items-center text-text text-lg text-left px-3">
+      <div className="h-15 w-full flex items-center text-text text-lg text-left px-3">
         Not found
       </div>
     );

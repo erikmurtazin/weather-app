@@ -9,6 +9,8 @@
   src: url('./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf');
 }
 @theme {
+  --background-image-small: url('./assets/images/bg-today-small.svg');
+  --background-image-large: url('./assets/images/bg-today-large.svg');
   --color-background: #03012d;
   --color-item-bg: #25253f;
   --color-btn-hover: #3d3c5b;

@@ -1,73 +1,44 @@
-# React + TypeScript + Vite
+Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a weather forecasting application built with React and TypeScript. It provides weather data for today and the upcoming week. Users can search for weather by city, choose different units of measurement (e.g., Celsius, Fahrenheit), and the app will remember the last search for convenience.
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Weather forecast for today.
 
-## React Compiler
+7-day weather forecast.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Search weather by city.
 
-## Expanding the ESLint configuration
+Unit conversion: Choose between Celsius, Fahrenheit, and other units.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Last search persistence: The app remembers your last searched city.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Open-Meteo API: Weather data is fetched from the Open-Meteo API.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Clone the repository:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+git clone https://github.com/erikmurtazin/weather-app
+cd weather-app
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Install dependencies:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+npm install
+
+Usage
+
+Run the app:
+
+npm start
+
+Open the browser and navigate to:
+
+http://localhost:5173
+
+Search for a city (e.g., "Vilnius") and get the weather forecast for today and the next 7 days.
+
+Choose your preferred units of measurement for temperature and other weather parameters (Celsius, Fahrenheit, etc.).
+
+The app will save the last city you searched for, so when you reload the page, the forecast for that city will be displayed.

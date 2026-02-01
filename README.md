@@ -31,8 +31,7 @@ Usage
 
 Run the app:
 
-npm run build
-npm run preview
+npm run build && npm run preview
 
 Open the browser and navigate to:
 

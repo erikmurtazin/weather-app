@@ -31,11 +31,12 @@ Usage
 
 Run the app:
 
-npm start
+npm run build
+npm run preview
 
 Open the browser and navigate to:
 
-http://localhost:5173
+http://localhost:4173
 
 Search for a city (e.g., "Vilnius") and get the weather forecast for today and the next 7 days.
 

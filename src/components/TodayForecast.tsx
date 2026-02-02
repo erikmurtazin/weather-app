@@ -32,7 +32,7 @@ const TodayForecast = () => {
           <div className="flex items-center">
             <img src={weatherIcon} alt="icon" className="w-30 h-30" />
             <span className="text-text italic text-6xl sm:text-7xl">
-              {forecast.current.temperature_2m}
+              {Math.round(forecast.current.temperature_2m)}
               {forecast.current_units.temperature_2m}
             </span>
           </div>
@@ -40,7 +40,7 @@ const TodayForecast = () => {
       </div>
       <div className="grid mt-7 w-full grid-cols-2 md:grid-cols-4 gap-5">
         <div className="w-full lg:h-27 md:h-32 h-35 rounded-xl bg-item-bg p-4 flex flex-col items-start justify-between border border-border">
-          <span className="font-custom-regular text-text text-md">
+          <span className="font-custom-regular text-text text-lg">
             Feels Like
           </span>
           <span className="font-custom-regular text-text text-2xl">
@@ -49,7 +49,7 @@ const TodayForecast = () => {
           </span>
         </div>
         <div className="w-full lg:h-27 md:h-32 h-35 rounded-xl bg-item-bg p-4 flex flex-col items-start justify-between border border-border">
-          <span className="font-custom-regular text-text text-md">
+          <span className="font-custom-regular text-text text-lg">
             Humidity
           </span>
           <span className="font-custom-regular text-text text-2xl">
@@ -58,14 +58,14 @@ const TodayForecast = () => {
           </span>
         </div>
         <div className="w-full lg:h-27 md:h-32 h-35 rounded-xl bg-item-bg p-4 flex flex-col items-start justify-between border border-border">
-          <span className="font-custom-regular text-text text-md">Wind</span>
+          <span className="font-custom-regular text-text text-lg">Wind</span>
           <span className="font-custom-regular text-text text-2xl">
             {forecast.current.wind_speed_10m}{' '}
             {forecast.current_units.wind_speed_10m}
           </span>
         </div>
         <div className="w-full lg:h-27 md:h-32 h-35 rounded-xl bg-item-bg p-4 flex flex-col items-start justify-between border border-border">
-          <span className="font-custom-regular text-text text-md">
+          <span className="font-custom-regular text-text text-lg">
             Precipitation
           </span>
           <span className="font-custom-regular text-text text-2xl">

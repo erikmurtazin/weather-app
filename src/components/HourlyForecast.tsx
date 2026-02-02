@@ -132,13 +132,13 @@ const HourlyForecast = () => {
             <img
               src={getWeatherIcon(forecast.hourly.weather_code[index])}
               alt="icon"
-              className="sm:h-15 sm:w-15 h-17 w-17"
+              className="sm:h-16 sm:w-16 h-19 w-19"
             ></img>
             <span className="text-text sm:text-lg text-xl">{hours}</span>
           </div>
 
           <span className="text-text sm:text-lg sm:mx-5 mx-8 text-xl">
-            {forecast.hourly.temperature_2m[index]}
+            {Math.round(forecast.hourly.temperature_2m[index])}
             {'°'}
           </span>
         </div>

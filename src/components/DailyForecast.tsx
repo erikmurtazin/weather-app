@@ -31,7 +31,7 @@ const DailyForecast = () => {
     return forecast.daily.time.map((date, index) => (
       <div
         key={index}
-        className="w-full lg:h-auto md:h-35 sm:h-50 h-43 bg-item-bg rounded-xl border border-border flex flex-col items-center justify-between md:py-2 py-5"
+        className="w-full lg:h-auto md:h-35 sm:h-50 h-43 bg-item-bg rounded-xl border border-border flex flex-col items-center justify-between py-2"
       >
         <span className="text-text text-lg">{getWeekday(date)}</span>
         <img
@@ -39,13 +39,13 @@ const DailyForecast = () => {
           alt="icon"
           className="sm:h-18 sm:w-18 w-22 h-22"
         ></img>
-        <div className="flex justify-between w-full sm:px-1 px-3">
+        <div className="flex justify-between w-full sm:px-2 px-3">
           <span className="text-text sm:text-sm text-lg">
-            {forecast.daily.temperature_2m_min[index]}
+            {Math.round(forecast.daily.temperature_2m_min[index])}
             {'°'}
           </span>
           <span className="text-text sm:text-sm text-lg">
-            {forecast.daily.temperature_2m_max[index]}
+            {Math.round(forecast.daily.temperature_2m_max[index])}
             {'°'}
           </span>
         </div>

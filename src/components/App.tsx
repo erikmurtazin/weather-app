@@ -62,10 +62,10 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-background pt-6">
-      <div className="max-w-300 w-full mx-auto md:px-7 sm:px-17 px-2">
+      <div className="max-w-300 w-full mx-auto md:px-7 sm:px-17 px-2.5">
         <Header />
         <main className="flex flex-col items-center w-full">
-          <h1 className="text-center font-custom-bricolage text-5xl text-text my-12">
+          <h1 className="text-center font-custom-bricolage text-5xl text-text my-5">
             How's the sky looking today?
           </h1>
           <Search />
